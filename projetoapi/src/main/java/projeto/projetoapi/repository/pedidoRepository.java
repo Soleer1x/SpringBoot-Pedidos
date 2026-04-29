@@ -1,7 +1,7 @@
 package projeto.projetoapi.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import projeto.projetoapi.models.pedido;
+import projeto.projetoapi.models.Pedido;
 
-public interface pedidoRepository extends JpaRepository<pedido,String> {
+public interface pedidoRepository extends JpaRepository<Pedido,String> {
 }

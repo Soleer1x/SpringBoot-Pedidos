@@ -15,7 +15,7 @@ public class ItemPedido {
 
     @ManyToOne
     @JoinColumn(name = "produto_id")
-    private produto produto;
+    private Produto produto;
 
     private Double quantidade;
     private Double preco;

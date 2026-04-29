@@ -10,7 +10,7 @@ import lombok.Data;
 @Data
 @Entity
 @JsonPropertyOrder({"id", "nome", "email", "endereco"})
-public class cliente {
+public class Cliente {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)

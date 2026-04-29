@@ -6,22 +6,19 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Data;
-import projeto.projetoapi.enums.status;
-
-import java.util.Date;
+import projeto.projetoapi.enums.categoria;
 
 @Data
 @Entity
-@JsonPropertyOrder({"id", "cliente", "data", "status", "lista", "valorTotal"})
-public class pedido {
+@JsonPropertyOrder({"id", "nome", "descricao", "preco", "categoria"})
+public class Produto {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
 
-    private String cliente;
-    private Date data;
-    private status status;
-    private String lista;
-    private Double valorTotal;
+    private String nome;
+    private Double descricao;
+    private Double preco;
+    private categoria categoria;
 }
