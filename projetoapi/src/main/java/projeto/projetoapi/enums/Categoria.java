@@ -1,6 +1,6 @@
 package projeto.projetoapi.enums;
 
-public enum categoria {
+public enum Categoria {
     Hamburgueres,
     Pizzas,
     Massas,

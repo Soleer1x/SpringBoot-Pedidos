@@ -3,9 +3,8 @@ package projeto.projetoapi.models;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import jakarta.persistence.*;
 import lombok.Data;
-import projeto.projetoapi.enums.status;
-
-import java.util.Date;
+import projeto.projetoapi.enums.Status;
+import java.time.LocalDateTime;
 
 @Data
 @Entity
@@ -20,8 +19,11 @@ public class Pedido {
     @JoinColumn(name = "cliente_id")
     private Cliente cliente;
 
-    private Date data;
-    private status status;
+    private LocalDateTime data;
+
+    @Enumerated(EnumType.STRING)
+    private Status status;
+
     private String lista;
     private Double valorTotal;
 }

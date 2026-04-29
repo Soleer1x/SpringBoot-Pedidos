@@ -1,12 +1,9 @@
 package projeto.projetoapi.models;
 
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
-import projeto.projetoapi.enums.categoria;
+import projeto.projetoapi.enums.Categoria;
 
 @Data
 @Entity
@@ -20,5 +17,7 @@ public class Produto {
     private String nome;
     private Double descricao;
     private Double preco;
-    private categoria categoria;
+
+    @Enumerated(EnumType.STRING)
+    private Categoria categoria;
 }
